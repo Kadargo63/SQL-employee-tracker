@@ -48,9 +48,9 @@ INSERT INTO employee
 VALUES  
     ('Regina', 'Phalange', 1, NULL),
     ('Marco', 'Binaca', 2, 1),
-    ('Clarence', 'Breverton', 3 NULL),
+    ('Clarence', 'Breverton', 3, NULL),
     ('Lupita', 'Nyongo', 4, 3),
     ('Tina', 'Bobina', 5, NULL),
     ('Ricky', 'Spanish', 6, 5),
-    ('Tammy', 'Brewster' 7, NULL),
+    ('Tammy', 'Brewster', 7, NULL),
     ('Kayla', 'Beaverhausen', 8, 7);
