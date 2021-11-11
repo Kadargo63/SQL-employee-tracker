@@ -220,3 +220,102 @@ async function addEmployee() {
         });
     });
 }
+
+function remove(input) {
+    const promptQ = {
+        yes: "yes",
+        no: "no I don't (view all employees on the main option)"
+    };
+    inquirer.prompt([
+        {
+            name: "action",
+            type: "list",
+            message: "In order to proceed an employee,an ID must be entered. View all employees to get" +
+            " the emploee ID. Do you know the employee ID?",
+            choices: [promptQ.yes, promptQ.no]
+        }
+    ]).then(answer =>{
+        if (input === 'delete' && answer.action === "yes")
+        removeEmployee();
+        else if (input === 'role' && answer.action === "yes")
+        updateRole();
+        else viewAllEmployees();
+    });
+};
+
+async function removeEmployee() {
+
+    const answer = await inquirer.prompt([
+        {
+            name: "first",
+            type: "input",
+            message: "Enter the employee ID you want to remove: "
+        }
+    ]);
+
+    connection.query('DELETE FROM employee WHERE ?',
+        {
+            id: answer.first
+        },
+        function (err) {
+            if (err) throw err;
+        }
+    )
+    console.log('Employee has been removed on the system!');
+    prompt();
+};
+
+function askId() {
+    return ([
+        {
+            name: "name",
+            type: "input",
+            message: "What is the employee ID?: "
+        }
+    ]);
+}
+
+async functio updateRole() {
+    const employeeId = await inquirer.prompt(askId());
+
+    connection.query('SELECT role.id, role.title FROM role ORDER BY role.id;', async (rr,res) => {
+        if (err) throw err;
+        const { role } = await inquirer.prompt([
+            {
+                name: 'role',
+                type: 'list',
+                choices: () => res.map(res => res.title),
+                message: 'What is the new employee role?: '
+            }
+        ]);
+        let roleId;
+        for (const row of res) {
+            if (row.title === role) {
+                roleId = row.id;
+                continue;
+            }
+        }
+        connection.query(`UPDATE employee
+        SET role_id = ${roleId}
+        WHERE employee.id = ${employeeId.name}`, async (err, res) => {
+            if (err) throw err;
+            console.log('Role has been updated.')
+            prompt();
+        });
+    });
+}
+
+function askName() {
+    return ([
+        {
+            name: "first",
+            type: "input",
+            message: "Enter the first name: "
+        },
+        {
+            name: "last",
+            type: "input",
+            message: "Enter the last name: "
+        }
+    ]);
+}
