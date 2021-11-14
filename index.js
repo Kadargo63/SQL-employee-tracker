@@ -23,11 +23,11 @@ const connection = mysql.createConnection({
     port: 3306,
 
     // your username
-    user: '',
+    user: 'root',
 
     // Your password
-    password: '',
-    database: ''
+    password: 'Runyoucleverboy&remember!',
+    database: 'employees'
 });
 
 connection.connect(err => {
@@ -275,7 +275,7 @@ function askId() {
     ]);
 }
 
-async functio updateRole() {
+async function updateRole() {
     const employeeId = await inquirer.prompt(askId());
 
     connection.query('SELECT role.id, role.title FROM role ORDER BY role.id;', async (rr,res) => {
