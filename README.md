@@ -8,6 +8,7 @@
 
   # Table of Contents 
   * [Installation](#-Installation)
+  * [Run](#-Run)
   * [Usage](#-Usage)
   * [License](#-Installation)
   * [Questions](#-Contact-Information)
