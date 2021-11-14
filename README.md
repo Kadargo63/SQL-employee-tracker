@@ -8,12 +8,12 @@ This content management system allows for the easy interaction and navigation of
 This application is structured according to the following database schema:
 ![schema](https://user-images.githubusercontent.com/88639772/141695197-65b0dbcd-c9bc-414c-a84f-5bc91c5638e2.png)
 
-![screenshot](https://user-images.githubusercontent.com/88639772/141695215-dee619e5-d630-40b8-bdfe-8d58743bfe50.png)
 
   # Table of Contents 
   * [Installation](#-Installation)
   * [Run](#-Run)
   * [Usage](#-Usage)
+  * [Demonstration](#-Demonstration)
   * [License](#-Installation)
   * [Questions](#-Contact-Information)
       
@@ -48,6 +48,12 @@ This application is structured according to the following database schema:
   "Remove An Employee" deletes an employee from the database.
 
   "Update Employee Role" updates the role/ title of an employee.
+  
+  # Demonstration
+  
+![screenshot](https://user-images.githubusercontent.com/88639772/141695215-dee619e5-d630-40b8-bdfe-8d58743bfe50.png)
+
+Walkthrough video available here: 
   
   # License 
   MIT
