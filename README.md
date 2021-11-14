@@ -10,25 +10,43 @@
   * [Installation](#-Installation)
   * [Usage](#-Usage)
   * [License](#-Installation)
-  * [Contributing](#-Contributing)
-  * [Tests](#-Tests)
   * [Questions](#-Contact-Information)
       
   # Installation
-  Start by cloning repo to local machine. `npm i` to install npm dependencies
+  Start by cloning repo to local machine
+  
+  `npm i` to install node package manager dependencies
+  
+  `npm i inquirer` to use inquirer to capture command line input
+  
+  `npm init` to create json file
+  
+  `npm i mysql` to connect to MySQL database
+  
+  `npm console.table` to format tables
+  
+  # Run
+  `node index.js`
   
   # Usage
-  This versatile application can accomodate thousands of employees and roles and present their data in a number of ways. "View All Employees" prints all employee data in a table diplaying the employee id, employee name, title, department, salary and employee manager. "View All Emplo...
+  This versatile application can accomodate thousands of employees and roles and present their data in a number of ways. 
+  
+  "View All Employees" prints all employee data in a table diplaying the employee id, employee name, title, department, salary  and employee manager. 
+  "View All Employees By Manager" prints all employee managers and their associates.
+
+"View All Employees By Department" prints all departments and the employees within it.
+
+"View All Roles" prints all roles/titles and the corresponding employees.
+
+"Add An Employee" adds a new entry to the database.
+
+"Remove An Employee" deletes an employee from the database.
+
+"Update Employee Role" updates the role/ title of an employee.
   
   # License 
   MIT
   * As this license list was not comprehensive, if you need another license, use the contact  information below to ask for license to be added. 
-  
-  # Contributing 
-  -
-  
-  # Tests
-  -
   
   # Contact Information 
   * GitHub Username: Kadargo63
