@@ -278,7 +278,7 @@ function askId() {
 async function updateRole() {
     const employeeId = await inquirer.prompt(askId());
 
-    connection.query('SELECT role.id, role.title FROM role ORDER BY role.id;', async (rr,res) => {
+    connection.query('SELECT role.id, role.title FROM role ORDER BY role.id;', async (err,res) => {
         if (err) throw err;
         const { role } = await inquirer.prompt([
             {
