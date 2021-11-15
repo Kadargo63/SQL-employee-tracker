@@ -53,7 +53,7 @@ This application is structured according to the following database schema:
   
 ![screenshot](https://user-images.githubusercontent.com/88639772/141695215-dee619e5-d630-40b8-bdfe-8d58743bfe50.png)
 
-Walkthrough video available here: 
+Walkthrough video available here: https://watch.screencastify.com/v/PmCWjEUxoXZe0v7bonuA 
   
   # License 
   MIT
